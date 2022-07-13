@@ -70,39 +70,3 @@
 .hero-text {
   font-size: 1.75rem;
 }
-
-/*
-  Animations
-*/
-
-.fade-in-left {
-  animation: fadeInLeft 1s ease-in-out;
-}
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.3s ease-in-out;
-  animation-play-state: paused;
-}
-.fade-in.animate {
-  animation-play-state: running;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate(0, 20px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0, 0);
-  } 
-}
