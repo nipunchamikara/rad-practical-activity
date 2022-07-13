@@ -4,12 +4,17 @@ window.addEventListener("scroll", () => {
   else navbar.classList.remove("scroll");
 });
 
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add("animate");
-    else entry.target.classList.remove("animate");
-  });
-});
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("animate");
+      else entry.target.classList.remove("animate");
+    });
+  },
+  {
+    threshold: 0.25,
+  }
+);
 [...document.getElementsByClassName("fade-in")].forEach((element) => {
   io.observe(element);
 });
